@@ -23,7 +23,7 @@ export function createGeminiClient(deps: GeminiDeps): JsonClient {
     generateJson: async (request) => {
       const retries = deps.maxRetries ?? 4;
       const delay = deps.baseDelayMs ?? 2000;
-      const model = deps.model ?? 'gemini-3.8-flash';
+      const model = deps.model ?? 'gemini-flash-latest';
       const timeoutMs = deps.timeoutMs ?? 180000;
       const sleep = deps.sleep || ((ms: number) => new Promise(r => setTimeout(r, ms)));
 
